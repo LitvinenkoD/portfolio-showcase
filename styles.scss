@@ -70,6 +70,9 @@ h1{
   font-size: 2rem;
 }
 
+.generic-paragraph{
+  font-size: 1.2rem;
+}
 
 .welcome-section{
   min-height: 100vh;
@@ -109,35 +112,33 @@ h1{
 }
 
 .welcome-section__paragraph{
-
   text-align: center;
   max-width: 50ch;
 }
 
-.generic-paragraph{
-  font-size: 1.2rem;
-}
-
 .welcome-section__scroll-down-paragraph{
-  margin-top: calc(2 * $margin-unit);
+  margin-top: calc(4 * $margin-unit);
 }
-
-
-
 
 .project-section{
-  min-height: 100vh;
+  margin-top: calc($margin-unit * 20);
+  row-gap: calc($margin-unit * 20);
+  padding-bottom: calc($margin-unit * 20);
+}
+
+.project{
   flex-direction: column;
 }
 
-.project-section__image-container{
+.project__heading{
+  max-width: 25ch;
+}
+
+.project__image-container{
+  margin-top: calc($margin-unit * 4);
   position: relative;
   overflow: hidden;
   img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     height: 100%;
     border-radius: 8px;
   }
@@ -145,16 +146,15 @@ h1{
 
 
 video,
-.project-section__image-container{
+.project__image-container{
   width: 90%;
   height: 70vh;
-  padding: .25rem;
 }
 
-.project-section-paragraph{
-  max-width: 60ch;
+.project__paragraph{
+  max-width: 45ch;
   text-align: center;
-  margin-top: calc($margin-unit * 8);
+  margin-top: calc($margin-unit * 6);
 }
 
 
@@ -172,7 +172,7 @@ video,
 
 @media screen and(min-width: 400px){
   video,
-  .project-section__image-container{
+  .project__image-container{
     height: 80vh;
   }
 }
@@ -185,7 +185,7 @@ video,
 
 @media screen and(min-width: 800px){
   video,
-  .project-section__image-container{
+  .project__image-container{
     width: 90%;
   }
 
@@ -201,28 +201,38 @@ video,
     max-width: 600px;
   }
 
+  .project__paragraph{
+    max-width: 60ch;
+    text-align: center;
+    margin-top: calc($margin-unit * 8);
+  }
+
   @media screen and(min-width: 800px){
-    .project-section{
-      margin-top: calc(30 * $margin-unit);
-      min-height: 100vh;
-      flex-direction: column;
-    }
-
-    video,
-    .project-section__image-container{
-      width: 90%;
-      img{
-        width: 100%;
-        height: unset;
-      }
-    }
-
     h1{
       font-size: 2.5rem;
     }
     p{
       font-size: 1.5rem;
     }
+
+    .project-section{
+      margin-top: calc(30 * $margin-unit);
+    }
+
+    video,
+    .project__image-container{
+      width: 90%;
+      height: fit-content;
+      img{
+        width: 100%;
+        height: unset;
+      }
+    }
+
+    .project__heading{
+      max-width: unset;
+    }
+
   }
   @media screen and(min-width: 1200px){
     .welcome-section__container{

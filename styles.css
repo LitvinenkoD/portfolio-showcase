@@ -48,6 +48,10 @@ h1 {
   font-size: 2rem;
 }
 
+.generic-paragraph {
+  font-size: 1.2rem;
+}
+
 .welcome-section {
   min-height: 100vh;
 }
@@ -90,43 +94,44 @@ h1 {
   max-width: 50ch;
 }
 
-.generic-paragraph {
-  font-size: 1.2rem;
-}
-
 .welcome-section__scroll-down-paragraph {
-  margin-top: 8px;
+  margin-top: 16px;
 }
 
 .project-section {
-  min-height: 100vh;
+  margin-top: 80px;
+  row-gap: 80px;
+  padding-bottom: 80px;
+}
+
+.project {
   flex-direction: column;
 }
 
-.project-section__image-container {
+.project__heading {
+  max-width: 25ch;
+}
+
+.project__image-container {
+  margin-top: 16px;
   position: relative;
   overflow: hidden;
 }
-.project-section__image-container img {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.project__image-container img {
   height: 100%;
   border-radius: 8px;
 }
 
 video,
-.project-section__image-container {
+.project__image-container {
   width: 90%;
   height: 70vh;
-  padding: 0.25rem;
 }
 
-.project-section-paragraph {
-  max-width: 60ch;
+.project__paragraph {
+  max-width: 45ch;
   text-align: center;
-  margin-top: 32px;
+  margin-top: 24px;
 }
 
 .links {
@@ -140,7 +145,7 @@ video,
 
 @media screen and (min-width: 400px) {
   video,
-.project-section__image-container {
+.project__image-container {
     height: 80vh;
   }
 }
@@ -151,7 +156,7 @@ video,
 }
 @media screen and (min-width: 800px) {
   video,
-.project-section__image-container {
+.project__image-container {
     width: 90%;
   }
   h1 {
@@ -163,27 +168,34 @@ video,
   .welcome-section__hero-image {
     max-width: 600px;
   }
+  .project__paragraph {
+    max-width: 60ch;
+    text-align: center;
+    margin-top: 32px;
+  }
 }
 @media screen and (min-width: 800px) and (min-width: 800px) {
-  .project-section {
-    margin-top: 120px;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-  video,
-.project-section__image-container {
-    width: 90%;
-  }
-  video img,
-.project-section__image-container img {
-    width: 100%;
-    height: unset;
-  }
   h1 {
     font-size: 2.5rem;
   }
   p {
     font-size: 1.5rem;
+  }
+  .project-section {
+    margin-top: 120px;
+  }
+  video,
+.project__image-container {
+    width: 90%;
+    height: fit-content;
+  }
+  video img,
+.project__image-container img {
+    width: 100%;
+    height: unset;
+  }
+  .project__heading {
+    max-width: unset;
   }
 }
 @media screen and (min-width: 800px) and (min-width: 1200px) {
