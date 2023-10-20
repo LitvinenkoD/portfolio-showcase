@@ -14,14 +14,11 @@ function controlVideoType(){
   const vw = window.innerWidth
 
   if(vw >= 800 && current_view_mode != "desktop"){
-    utils.setVideosDesktop()
     utils.setProjectImagesDesktop()
-    
     current_view_mode = "desktop"
   }
   
   if ( vw <= 800 && current_view_mode != "mobile"){
-    utils.setVideosMobile()
     utils.setProjectImagesMobile()
     current_view_mode = "mobile"
   }
